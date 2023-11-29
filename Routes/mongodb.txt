@@ -1,0 +1,71 @@
+
+
+                MongoDB : used to store large amount of data permanently
+            ---------------
+
+ 1. Difference between SQL and MongoDB 
+
+                 SQL                                                 MongoDB
+    ---------------------------------                    -----------------------------------
+     - Relational DBMS                                       - Document Oriented NoSQL DB
+     - Store in Table with row & column                      - Collection of JSON Documents
+     - Uses fixed schemas(structure of the                   - It use Dynamic schemas
+        Document is schemas)
+     - Used to optimize complex join and transactions        - optimised for scalability and performnace
+     - Support rich set of data types                        - limited set of data types
+     - Declarative query language                            - Expressive query language based on JSON  
+     - ACID (Atomic, consistency,Isolation and Durability)   - NoSQL based on CAP (consistency , Availability and Partition tolerance)
+        property                                               property
+     - Uses Traditional Bussiness Applications               - Used in Big Data and real time web Applications
+
+
+  2. Commands In MongoDB
+
+      - display all database : show database
+      - switch control to database : use projectname
+      - to see collections : show collections
+      - to get all documents in a collection : db.collection-name.find() 
+      - to get all documents which satisfy the condition  : find(condition)
+      - find only one uniq data from collections : db.collection-name.findOne({}) 
+      - to limit the document while reading from db : limit() - db.collection-name.find().limit() 
+      - to sort data from collections( ascending-order : 1,descending-order : -1) :  db.collection-name.find().sort({username:1})
+      - insert one or many documents : 
+                           - insertOne({})
+                           - insertMany([{}])
+      - update one or many documents :
+                           - updateMany() - $set
+                           - updateOne()
+      - delete one or many documents :
+                           - deleteOne()
+                           - deleteMany()
+      - How many collections in a document : db.collection-name.countDocuments() 
+      - Query Commands
+            - $gt / gte / lt / lte
+            - $inc / $set / $push /$pull
+            - $or / $and
+            - $exists 
+
+      - How we can join two Collection
+                              - Aggregation : Aggregation
+                                             - $lookup : 
+   3. Mongoose
+
+         - Mongoose :MongoDB ODM (Object database Modelling)
+         - used to transalate the code its representation from MongoDB to the Node.js
+            - Advantages of Mongoose module :
+                  - Collection validation of the MongoDB database can be done easily.
+                  - Predefined Structure can be implemented on the collection.
+                  - Constraints can be applied to documents of collections using Mongoose.
+
+          1. Node JS Library to communicate MongoDB
+         2. install Mongoose: npm i Mongoose
+         3. create a new folder for define db connection using Mongoose
+            - create a js file to edfine connectivity
+            - import Mongoose
+            - get connection string from process.env
+            - connect MongoDB with node using Mongoose
+            - import connection.js file in index.js file
+         4. Schema 
+         5. Model 
+
+   Middleware- function it contain 3 arguements    
